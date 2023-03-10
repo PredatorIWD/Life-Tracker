@@ -1,4 +1,4 @@
-# Life Tracker
+# Life Tracker - UNDER CONSTRUCTION
 
 A Single Page Application built with the [**MERN stack**](https://www.mongodb.com/mern-stack) to help you to track your:
 - :white_check_mark: **Workout progress**, the amount of weight you lift each training session per exercise.
