@@ -5,6 +5,10 @@ A Single Page Application built with the [**MERN stack**](https://www.mongodb.co
 - :white_check_mark: **Sleep schedule**, the number of hours of sleep you get every night.
 - :white_check_mark: **Personal notes**, your goals, milestones, to-do lists or other things you want to quickly write down.
 
+## Showcase - Proof of concept
+
+![](proof-of-concept.gif)
+
 ## :muscle: Get Started
 
 ## :wrench: Playing with the source code, for developers
