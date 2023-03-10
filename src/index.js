@@ -1,17 +1,56 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
+import ResponsiveAppBar from './components/ResponsiveAppBar.js';
+import AppTabs from './components/AppTabs.js';
+import PageWorkout from './components/pages/Workout';
+import PageSleep from './components/pages/Sleep';
+import PageLanding from './components/pages/Landing';
+import PageCreateTab from './components/pages/CreateTab';
+
+import { styled } from '@mui/system';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Stack from '@mui/material/Stack';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+import Box from '@mui/material/Box';
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
+function App() {
+
+  const allTabs = [];
+
+  return (
+    <>
+      <ResponsiveAppBar />
+      <AppTabs
+        showLandingTab={!allTabs.length}
+        tabLanding={<PageLanding />}
+      // tabWorkout={<PageWorkout />}
+      // tabSleep={<PageSleep />}
+      // tabNotes={<h1>testNotes</h1>}
+      />
+    </>
+  );
+
+}
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
     <App />
-  </React.StrictMode>
+  </ThemeProvider>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
